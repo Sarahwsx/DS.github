@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Blog Pessoal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --roxo-escuro: #3B0764;
+    --roxo: #6B21A8;
+    --roxo-claro: #A855F7;
+    --cinza-fundo: #F4F3F6;
+    --cinza-card: #FFFFFF;
+    --cinza-texto: #3F3B45;
+    --cinza-suave: #857E8F;
+    --borda: #E4E0EA;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--cinza-fundo);
+    color: var(--cinza-texto);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    color: var(--roxo-escuro);
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
+    color: #fff;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  .header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    color: #fff;
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+    font-weight: 700;
+  }
+
+  header p {
+    margin-top: 0.8rem;
+    font-size: 1.1rem;
+    color: #E9D8FD;
+    max-width: 44ch;
+  }
+
+  main {
+    max-width: 760px;
+    margin: -3rem auto 0;
+    padding: 0 1.5rem 4rem;
+  }
+
+  section {
+    background: var(--cinza-card);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .interesses {
+    list-style: none;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .interesses li {
+    padding: 0.9rem 1rem;
+    background: var(--cinza-fundo);
+    border-left: 3px solid var(--roxo-claro);
+    border-radius: 6px;
+    font-size: 0.98rem;
+  }
+
+  .interesses li strong {
+    color: var(--roxo-escuro);
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.2rem;
+  }
+
+  .posts-vazio {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--cinza-suave);
+  }
+
+  .posts-vazio p:first-child {
+    font-size: 1.05rem;
+    color: var(--cinza-texto);
+    margin-bottom: 0.4rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    color: var(--cinza-suave);
+    font-size: 0.9rem;
+  }
+
+  footer strong {
+    color: var(--roxo);
+  }
+
+  @media (max-width: 500px) {
+    header { padding: 3rem 1.2rem 4rem; }
+    section { padding: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1>Olá, seja bem-vindo(a) ao meu blog!</h1>
+    <p>Aqui eu vou compartilhar um pouco do que estou aprendendo e vivendo — dos estudos aos esportes.</p>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>Sobre mim</h2>
+    <p>Sou estudante do ensino fundamental 2 e moro na zona leste de São Paulo. Estou aprendendo inglês, adoro matemática e passo boa parte do tempo treinando esportes. Este é o meu primeiro site, feito enquanto aprendo a programar do zero!</p>
+  </section>
+
+  <section>
+    <h2>Estudante</h2>
+    <ul class="interesses">
+      <li><strong>Fase atual</strong>Ensino fundamental 2</li>
+      <li><strong>Matéria favorita</strong>Matemática</li>
+      <li><strong>Programação</strong>Aprendendo a criar meu primeiro site</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Esportes</h2>
+    <ul class="interesses">
+      <li><strong>Atletismo</strong>Treino e corrida</li>
+      <li><strong>Vôlei</strong>Prática regular</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cursos</h2>
+    <ul class="interesses">
+      <li><strong>Fazendo agora</strong>Inglês</li>
+    </ul>
+    <ul class="interesses" style="margin-top: 0.7rem;">
+      <li><strong>Quero fazer no futuro</strong>Química, Desenvolvimento de Sistemas, Espanhol, Inglês fluente, Francês e Geofísica</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Posts do blog</h2>
+    <div class="posts-vazio">
+      <p>Ainda não publiquei nenhum post.</p>
+      <p>Volte em breve para acompanhar minhas novidades!</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Feito com <strong>♥</strong> enquanto aprendo a programar.
+</footer>
+
+</body>
+</html>
