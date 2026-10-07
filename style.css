@@ -1,0 +1,238 @@
+/* ============ CORES E MEDIDAS (fáceis de trocar) ============ */
+:root {
+  --grafite: #25232e;
+  --cinza-fundo: #f3f2f6;
+  --cinza-texto: #5a5666;
+  --cinza-linha: #d9d6e0;
+  --roxo: #5b2fc9;
+  --lilas: #d8ccf7;
+  --branco: #ffffff;
+
+  --fonte-titulo: "Bricolage Grotesque", system-ui, sans-serif;
+  --fonte-texto: "Atkinson Hyperlegible", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--grafite);
+  background: var(--branco);
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.15;
+  margin: 0 0 0.6em;
+}
+
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); }
+h3 { font-size: 1.3rem; }
+
+p { margin: 0 0 1em; max-width: 62ch; }
+
+a { color: var(--roxo); }
+
+/* Foco visível para quem usa o teclado */
+a:focus-visible {
+  outline: 3px solid var(--roxo);
+  outline-offset: 3px;
+}
+
+.pular {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--branco);
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+.pular:focus { left: 0; }
+
+/* Espaçamento lateral comum a todas as seções */
+.miolo {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.miolo.estreito { max-width: 720px; }
+
+/* ============ MENU ============ */
+.topo {
+  background: var(--grafite);
+  padding: 0.9rem 1.25rem;
+}
+.topo nav {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+}
+.topo a {
+  color: var(--lilas);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.topo a:hover { text-decoration: underline; }
+.topo a:focus-visible { outline-color: var(--lilas); }
+
+/* ============ ABERTURA ============ */
+.abertura {
+  position: relative;
+  overflow: hidden;
+  background: var(--grafite);
+  color: var(--branco);
+  padding: clamp(3rem, 9vw, 6rem) 0 clamp(7rem, 16vw, 11rem);
+}
+.abertura h1 {
+  font-size: clamp(2.2rem, 7vw, 4.2rem);
+  font-weight: 700;
+  max-width: 14em;
+}
+.abertura-texto {
+  color: #d6d3df;
+  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+.botao {
+  display: inline-block;
+  background: var(--lilas);
+  color: var(--grafite);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 6px;
+}
+.botao:hover { background: var(--branco); }
+.botao:focus-visible { outline-color: var(--branco); }
+
+/* Trilha de circuito desenhada no fim da abertura */
+.circuito {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  max-height: 170px;
+  opacity: 0.9;
+}
+.circuito path {
+  fill: none;
+  stroke: var(--roxo);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+.circuito circle {
+  fill: var(--grafite);
+  stroke: var(--lilas);
+  stroke-width: 3;
+}
+
+/* ============ BLOCOS ============ */
+.bloco { padding: clamp(2.5rem, 7vw, 4.5rem) 0; }
+.bloco-claro { background: var(--cinza-fundo); }
+
+.apoio { color: var(--cinza-texto); }
+
+/* ============ TRILHA DOS 5 MESES ============ */
+.trilha {
+  list-style: none;
+  margin: 2rem 0 2.5rem;
+  padding: 0 0 0 2rem;
+  position: relative;
+}
+/* a linha vertical que liga os meses */
+.trilha::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 3px;
+  background: var(--roxo);
+}
+.trilha li {
+  position: relative;
+  padding-bottom: 1.8rem;
+}
+.trilha li:last-child { padding-bottom: 0; }
+/* a bolinha de cada mês */
+.trilha li::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 0.35rem;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--cinza-fundo);
+  border: 3px solid var(--roxo);
+}
+.trilha h3 { margin-bottom: 0.15em; }
+.trilha .foco {
+  color: var(--roxo);
+  font-weight: 700;
+  margin-bottom: 0.4em;
+}
+.trilha li p:last-child { margin-bottom: 0; }
+
+.subtitulo { margin-top: 0.5rem; }
+
+.paralelo {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 1.2rem;
+}
+.paralelo li {
+  border-left: 3px solid var(--lilas);
+  padding-left: 1rem;
+  max-width: 62ch;
+}
+.paralelo strong {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+}
+
+/* ============ JÁ EXPLOREI ============ */
+.explorado {
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1.6rem 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.explorado dt {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--roxo);
+}
+.explorado dd { margin: 0.2rem 0 0; }
+
+/* ============ RODAPÉ ============ */
+.rodape {
+  background: var(--grafite);
+  color: #d6d3df;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+}
+.rodape p { margin: 0 auto; }
+
+/* ============ TELAS GRANDES ============ */
+@media (min-width: 760px) {
+  .paralelo { grid-template-columns: repeat(3, 1fr); max-width: none; }
+  .paralelo li { max-width: none; }
+}
