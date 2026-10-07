@@ -1,189 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meu Blog Pessoal</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --roxo-escuro: #3B0764;
-    --roxo: #6B21A8;
-    --roxo-claro: #A855F7;
-    --cinza-fundo: #F4F3F6;
-    --cinza-card: #FFFFFF;
-    --cinza-texto: #3F3B45;
-    --cinza-suave: #857E8F;
-    --borda: #E4E0EA;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Laboratório de Ideias</title>
+  <meta name="description" content="Meu site pessoal: o que já explorei e o que quero aprender em tecnologia nos próximos 5 meses.">
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  <!-- Fontes do Google: uma para títulos e outra para textos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
 
-  body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background: var(--cinza-fundo);
-    color: var(--cinza-texto);
-    line-height: 1.6;
-  }
-
-  h1, h2, h3 {
-    font-family: 'Fraunces', Georgia, serif;
-    color: var(--roxo-escuro);
-  }
-
-  header {
-    background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo));
-    color: #fff;
-    padding: 4rem 1.5rem 5rem;
-  }
-
-  .header-inner {
-    max-width: 760px;
-    margin: 0 auto;
-  }
-
-  header h1 {
-    color: #fff;
-    font-size: clamp(2.2rem, 6vw, 3.2rem);
-    font-weight: 700;
-  }
-
-  header p {
-    margin-top: 0.8rem;
-    font-size: 1.1rem;
-    color: #E9D8FD;
-    max-width: 44ch;
-  }
-
-  main {
-    max-width: 760px;
-    margin: -3rem auto 0;
-    padding: 0 1.5rem 4rem;
-  }
-
-  section {
-    background: var(--cinza-card);
-    border: 1px solid var(--borda);
-    border-radius: 14px;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .interesses {
-    list-style: none;
-    display: grid;
-    gap: 0.7rem;
-  }
-
-  .interesses li {
-    padding: 0.9rem 1rem;
-    background: var(--cinza-fundo);
-    border-left: 3px solid var(--roxo-claro);
-    border-radius: 6px;
-    font-size: 0.98rem;
-  }
-
-  .interesses li strong {
-    color: var(--roxo-escuro);
-    display: block;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin-bottom: 0.2rem;
-  }
-
-  .posts-vazio {
-    text-align: center;
-    padding: 2.5rem 1rem;
-    color: var(--cinza-suave);
-  }
-
-  .posts-vazio p:first-child {
-    font-size: 1.05rem;
-    color: var(--cinza-texto);
-    margin-bottom: 0.4rem;
-  }
-
-  footer {
-    text-align: center;
-    padding: 2rem 1.5rem;
-    color: var(--cinza-suave);
-    font-size: 0.9rem;
-  }
-
-  footer strong {
-    color: var(--roxo);
-  }
-
-  @media (max-width: 500px) {
-    header { padding: 3rem 1.2rem 4rem; }
-    section { padding: 1.5rem; }
-  }
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <h1>Olá, seja bem-vindo(a) ao meu blog!</h1>
-    <p>Aqui eu vou compartilhar um pouco do que estou aprendendo e vivendo — dos estudos aos esportes.</p>
-  </div>
-</header>
+  <a class="pular" href="#trilha">Pular para a trilha</a>
 
-<main>
+  <header class="topo">
+    <nav aria-label="Menu principal">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#trilha">Próximos 5 meses</a>
+      <a href="#explorei">Já explorei</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
 
-  <section>
-    <h2>Sobre mim</h2>
-    <p>Sou estudante do ensino fundamental 2 e moro na zona leste de São Paulo. Estou aprendendo inglês, adoro matemática e passo boa parte do tempo treinando esportes. Este é o meu primeiro site, feito enquanto aprendo a programar do zero!</p>
-  </section>
-
-  <section>
-    <h2>Estudante</h2>
-    <ul class="interesses">
-      <li><strong>Fase atual</strong>Ensino fundamental 2</li>
-      <li><strong>Matéria favorita</strong>Matemática</li>
-      <li><strong>Programação</strong>Aprendendo a criar meu primeiro site</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Esportes</h2>
-    <ul class="interesses">
-      <li><strong>Atletismo</strong>Treino e corrida</li>
-      <li><strong>Vôlei</strong>Prática regular</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Cursos</h2>
-    <ul class="interesses">
-      <li><strong>Fazendo agora</strong>Inglês</li>
-    </ul>
-    <ul class="interesses" style="margin-top: 0.7rem;">
-      <li><strong>Quero fazer no futuro</strong>Química, Desenvolvimento de Sistemas, Espanhol, Inglês fluente, Francês e Geofísica</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Posts do blog</h2>
-    <div class="posts-vazio">
-      <p>Ainda não publiquei nenhum post.</p>
-      <p>Volte em breve para acompanhar minhas novidades!</p>
+  <!-- ABERTURA: a parte mais marcante do site -->
+  <section class="abertura">
+    <div class="miolo">
+      <h1>Estou construindo meu caminho em tecnologia.</h1>
+      <p class="abertura-texto">
+        Aqui eu mostro o que já explorei e o que vou aprender entre
+        outubro de 2026 e março de 2027: eletrônica, robótica, jogos, sistemas e idiomas.
+      </p>
+      <a class="botao" href="#trilha">Ver minha trilha</a>
     </div>
+
+    <!-- Desenho de uma trilha de circuito (decoração) -->
+    <svg class="circuito" viewBox="0 0 600 200" aria-hidden="true" focusable="false">
+      <path d="M0 150 H140 L180 110 H320 L360 150 H470 L510 60 H600" />
+      <path d="M0 60 H90 L130 20 H260" />
+      <circle cx="140" cy="150" r="7" />
+      <circle cx="320" cy="110" r="7" />
+      <circle cx="470" cy="150" r="7" />
+      <circle cx="260" cy="20" r="7" />
+      <circle cx="510" cy="60" r="7" />
+    </svg>
   </section>
 
-</main>
+  <main>
 
-<footer>
-  Feito com <strong>♥</strong> enquanto aprendo a programar.
-</footer>
+    <section id="sobre" class="bloco">
+      <div class="miolo estreito">
+        <h2>Sobre mim</h2>
+        <p>
+          Sou estudante do ensino fundamental 2. Gosto de matemática, estou aprendendo inglês
+          e treino atletismo e vôlei. Este é o meu primeiro site, feito do zero enquanto
+          aprendo a programar.
+        </p>
+        <p>
+          Quero descobrir como as coisas funcionam por dentro, e depois montar as minhas próprias.
+        </p>
+      </div>
+    </section>
+
+    <!-- TRILHA: esta lista é uma sequência de meses, por isso usa lista ordenada -->
+    <section id="trilha" class="bloco bloco-claro">
+      <div class="miolo">
+        <h2>Minha trilha dos próximos 5 meses</h2>
+        <p class="apoio">Este é o plano inicial. Eu posso ajustar no caminho, conforme for aprendendo.</p>
+
+        <ol class="trilha">
+          <li>
+            <h3>Outubro</h3>
+            <p class="foco">Pensamento computacional e eletrônica</p>
+            <p>Aprender a quebrar um problema em passos pequenos. Entender o que é corrente, tensão e como acender um LED.</p>
+          </li>
+          <li>
+            <h3>Novembro</h3>
+            <p class="foco">Eletrônica e cultura maker</p>
+            <p>Montar circuitos simples e criar um objeto com minhas próprias mãos, usando materiais reaproveitados.</p>
+          </li>
+          <li>
+            <h3>Dezembro</h3>
+            <p class="foco">Robótica</p>
+            <p>Construir um robô simples que se mova e reaja ao ambiente.</p>
+          </li>
+          <li>
+            <h3>Janeiro</h3>
+            <p class="foco">Criar jogos infantis</p>
+            <p>Fazer um jogo colorido e fácil de jogar para crianças pequenas, e testar com elas.</p>
+          </li>
+          <li>
+            <h3>Fevereiro</h3>
+            <p class="foco">Desenvolvimento de sistemas e cultura hacker</p>
+            <p>Criar um pequeno sistema que guarda e mostra informações. Estudar a cultura hacker do lado ético: curiosidade, compartilhar conhecimento e segurança digital.</p>
+          </li>
+        </ol>
+
+        <h3 class="subtitulo">Em paralelo, todos os meses</h3>
+        <ul class="paralelo">
+          <li>
+            <strong>Inglês e espanhol fluentes</strong>
+            Praticar um pouco por dia: ouvir, ler e falar.
+          </li>
+          <li>
+            <strong>Liderança</strong>
+            Aprender a organizar um grupo, ouvir as pessoas e dividir tarefas em um projeto.
+          </li>
+          <li>
+            <strong>Empreendedorismo e educação financeira</strong>
+            Entender como uma ideia vira um produto e como cuidar bem do dinheiro.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="explorei" class="bloco">
+      <div class="miolo">
+        <h2>O que eu já explorei</h2>
+        <dl class="explorado">
+          <div>
+            <dt>HTML e CSS</dt>
+            <dd>Este site é meu primeiro projeto de programação.</dd>
+          </div>
+          <div>
+            <dt>Inglês</dt>
+            <dd>Estou fazendo curso agora.</dd>
+          </div>
+          <div>
+            <dt>Matemática</dt>
+            <dd>Minha matéria favorita, e a base do pensamento computacional.</dd>
+          </div>
+          <div>
+            <dt>Atletismo e vôlei</dt>
+            <dd>Treino com disciplina e aprendo a trabalhar em equipe.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="blog" class="bloco bloco-claro">
+      <div class="miolo estreito">
+        <h2>Blog</h2>
+        <p>Ainda não tem posts aqui. O primeiro vai ser sobre como eu montei este site.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Feito por mim enquanto aprendo a programar.</p>
+  </footer>
 
 </body>
 </html>
